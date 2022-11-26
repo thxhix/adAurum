@@ -1,0 +1,114 @@
+@import "_fonts.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
+main{
+    margin-bottom: 100px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@import "_elements.scss";
+
+@media (max-width: 1023px) {
+    .row--3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .modal {
+        width: auto;
+        left: 15px;
+        right: 15px;
+
+        transform: translate(0, -50%);
+        padding: 30px 15px;
+    }
+    .header {
+        padding: 15px 0;
+    }
+    .auth-menu__item,
+    .menu-list__item a {
+        padding: 10px;
+    }
+    .row--3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .auth-menu {
+        margin-left: 10px;
+    }
+    .auth-menu__item {
+        margin-right: 10px;
+    }
+    .menu-list__item a {
+        font-size: 14px;
+    }
+    .header__logo {
+        width: 100px;
+    }
+    .button--icon__title {
+        display: none;
+        visibility: hidden;
+    }
+
+    .notification {
+        left: 0;
+        right: 0;
+        padding: 30px 15px;
+        text-align: center;
+        &.active {
+            bottom: 0;
+        }
+    }
+
+    .form__input {
+        input,
+        textarea {
+            padding: 10px;
+            font-size: 12px;
+        }
+    }
+
+    .company-item-head__add {
+        text-align: right;
+        font-size: 10px !important;
+        padding: 10px 0;
+    }
+
+    .company-item {
+        padding: 30px 15px !important;
+    }
+
+    .company-comments {
+        margin-top: 20px;
+        padding-left: 15px !important;
+        &__item {
+            font-size: 10px !important;
+
+            span {
+                margin-right: 2px !important;
+            }
+        }
+    }
+
+    .company-item-head__title {
+        font-size: 14px !important;
+    }
+    .company-item__value {
+        font-size: 14px !important;
+    }
+}
